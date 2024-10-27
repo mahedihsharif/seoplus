@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link the output css file -->
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- link urbanist google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link plus jakarta sans google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>SEOPlus</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      /* Extra styling for smooth animation */
+      .move-item {
+        transition: transform 0.2s ease-out;
+      }
+      /* Keyframes for the animations */
+      @keyframes slideInFromLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Custom animation for sliding in from the left */
+      @keyframes slide-in-left {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Custom animation for sliding in from the right */
+      @keyframes slide-in-right {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Custom animation for sliding in from the top */
+      @keyframes slide-in-top {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .animate-slide-in-left {
+        animation: slide-in-left 0.8s ease-out forwards;
+      }
+      .animate-slide-in-right {
+        animation: slide-in-right 0.8s ease-out forwards;
+      }
+      .animate-slide-in-top {
+        animation: slide-in-top 0.8s ease-out forwards;
+      }
+      /* Animation utilities */
+      .animate-from-left {
+        animation: slideInFromLeft 1s ease-out forwards;
+      }
+
+      .animate-from-right {
+        animation: slideInFromRight 1s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-lavender py-6">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6"
+      >
+        <!-- logo -->
+        <div class="flex justify-center items-center space-x-2 cursor-pointer">
+          <img src="../assets/logo.png" alt="logo" class="w-10 h-10" />
+          <span class="text-3xl font-bold font-urbanist text-dark"
+            >SEOPlus</span
+          >
+        </div>
+        <!-- nav items -->
+        <nav class="hidden lg:flex">
+          <ul
+            class="flex justify-center text-dark space-x-6 text-[15px] font-medium leading-6 font-jakarta cursor-pointer"
+          >
+            <li class="hover:text-primary duration-100">
+              Home <i class="fa-solid fa-angle-down text-[12px] ml-[2px]"></i>
+            </li>
+            <li class="hover:text-primary duration-100">
+              About Us
+              <i class="fa-solid fa-angle-down text-[12px] ml-[2px]"></i>
+            </li>
+            <li class="hover:text-primary duration-100">
+              Services
+              <i class="fa-solid fa-angle-down text-[12px] ml-[2px]"></i>
+            </li>
+            <li class="hover:text-primary duration-100">
+              Projects
+              <i class="fa-solid fa-angle-down text-[12px] ml-[2px]"></i>
+            </li>
+            <li class="hover:text-primary duration-100">
+              Blog <i class="fa-solid fa-angle-down text-[12px] ml-[2px]"></i>
+            </li>
+            <li class="hover:text-primary duration-100">
+              Page <i class="fa-solid fa-angle-down text-[12px] ml-[2px]"></i>
+            </li>
+            <li class="hover:text-primary duration-100">
+              Contact
+              <i class="fa-solid fa-angle-down text-[12px] ml-[2px]"></i>
+            </li>
+          </ul>
+        </nav>
+        <!-- button -->
+        <div>
+          <button
+            class="relative border-[1px] border-primary px-4 py-2 rounded-full font-semibold text-base font-urbanist overflow-hidden group"
+          >
+            <span
+              class="relative z-20 duration-300 group-hover:text-[#fff] text-primary"
+              >Free Consult
+              <i class="fa-solid fa-arrow-right text-[12px] ml-[2px]"></i
+            ></span>
+            <span
+              class="absolute inset-0 bg-primary transition-transform duration-500 translate-x-full group-hover:translate-x-0"
+            >
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- banner section -->
+      <section
+        class="min-h-[90vh] overflow-hidden shadow-sm bg-bannerBgCurve bg-no-repeat bg-center"
+        id="banner"
+      >
+        <div
+          class="relative max-w-7xl mt-20 lg:mt-32 mx-auto lg:flex justify-between items-center gap-6"
+          id="banner-animated-section"
+        >
+          <!-- banner section left part -->
+          <div
+            class="bg-bannerBg bg-no-repeat bg-left-bottom px-4 md:ml-0 w-full md:w-3/6"
+          >
+            <h1
+              class="text-5xl leading-[70px] md:text-[80px] md:leading-[100px] font-urbanist font-bold text-dark"
+            >
+              Website's Design Visibility with SEO
+              <span
+                class="text-primary border-2 px-2 pb-2 border-dashed border-primary rounded-lg"
+                >Marketing</span
+              >
+            </h1>
+            <p
+              class="text-base font-urbanist font-medium text-textColor tracking-[0.32px] py-5"
+            >
+              Magnis viverra nisl rhoncus egestas rhoncus elit at. MasMagnis
+              viverra nisl rhoncus egestas rhoncus elit at. Massa volutpat
+              eleifend
+            </p>
+            <div class="flex justify-between">
+              <button
+                class="flex justify-center items-center gap-2 w-[204px] h-[60px] bg-primary text-white rounded-[45px] hover:bg-dark duration-300"
+              >
+                <img
+                  src="/assets/PaperPlaneTilt.svg"
+                  alt="PaperPlaneTilt icon"
+                /><span class="font-urbanist text-base font-semibold capitalize"
+                  >browse more</span
+                >
+              </button>
+              <img
+                src="/assets/XMLID_30_.svg"
+                alt=""
+                class="md:mr-48 mr-42 move-item"
+              />
+            </div>
+          </div>
+          <!-- banner section right part -->
+          <div class="w-full md:w-3/6">
+            <img src="/assets/banner_img.png" alt="banner" />
+            <div
+              class="absolute left-40 bottom-0 flex justify-center items-center w-32 h-32 rounded-full bg-primary"
+            >
+              <div
+                class="flex flex-wrap justify-center items-center w-28 h-28 border-2 rounded-full border-dashed border-white"
+              >
+                <h1 class="font-urbanist font-semibold text-[32px] text-white">
+                  2k+
+                </h1>
+                <p class="text-white -mt-10 font-normal text-sm">
+                  Project Done
+                </p>
+              </div>
+            </div>
+            <div
+              class="absolute -right-[380px] md:-right-[400px] bottom-0 rotate-45 -z-10 w-[600px] md:w-[770px] h-[145px] bg-primary"
+            >
+              <div
+                class="border-2 border-white absolute left-80 bottom-4 h-12 w-12 rounded-full move-item"
+              ></div>
+            </div>
+            <div
+              class="absolute -right-[200px] md:-right-[215px] -bottom-4 rotate-45 -z-10 w-[600px] md:w-[770px] h-[145px] bg-[#C34FF8]"
+            >
+              <div
+                class="bg-white absolute top-12 -right-10 h-9 w-[300px] rounded-full"
+              ></div>
+            </div>
+            <div class="absolute right-[80px] -bottom-[210px] move-item">
+              <img src="/assets/line3.svg" alt="" />
+            </div>
+            <div class="absolute -right-20 top-60 move-item">
+              <img src="/assets/line3.svg" alt="" />
+            </div>
+            <div
+              class="border-[1px] border-[#FE9D51] absolute right-14 -z-10 top-24 h-12 w-12 rounded-full move-item"
+            ></div>
+            <div
+              class="border-2 border-[#57D288] absolute right-[500px] bottom-0 h-6 w-6 rounded-full move-item"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- service section -->
+      <section class="bg-[#F4F5F9] py-10 md:py-32">
+        <div class="max-w-7xl mx-auto card">
+          <!-- service top part -->
+          <div class="md:flex justify-between items-center gap-20">
+            <div class="md:w-3/5 w-full ml-4 md:ml-0">
+              <p
+                class="w-24 h-6 bg-[#eaf9ff] rounded-full font-urbanist font-medium text-center text-base"
+              >
+                service
+              </p>
+              <h1
+                class="font-urbanist font-bold text-3xl md:text-[54px] tracking-[-1.08px] leading-10 md:leading-[62px] text-dark pt-5"
+              >
+                SEO Excellence Was Your Digital Eminence
+              </h1>
+            </div>
+            <div class="md:w-2/5 w-full ml-4 md:ml-0">
+              <p class="font-urbanist font-medium text-base text-textColor">
+                Distracted by the readable content of a page when looking atits
+                layout io The point of using Lorem Ipsum is that it has a more
+                Distracted by the readable content Distracted by the readable
+                content
+              </p>
+              <button
+                class="relative overflow-hidden group w-[162px] h-[60px] border-[1px] border-[#E7E7EB] rounded-full text-[#47479F] mt-5"
+              >
+                <span
+                  class="font-urbanist font-semibold text-base capitalize relative z-20 duration-300 group-hover:text-[#fff]"
+                  >read more
+                  <i class="fa-solid fa-arrow-right text-[12px] ml-2"></i
+                ></span>
+
+                <span
+                  class="absolute inset-0 bg-[#C34FF8] transition-transform duration-500 translate-x-full group-hover:translate-x-0"
+                >
+                </span>
+              </button>
+            </div>
+          </div>
+          <!-- service bottom part -->
+          <div
+            class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-20 gap-5 mx-5 md:mx-0"
+          >
+            <div class="flex items-center gap-5 bg-white px-4 py-8 rounded-md">
+              <div class="-mt-20">
+                <img src="/assets/seopulse.png" alt="" />
+              </div>
+              <div>
+                <h2
+                  class="font-urbanist font-semibold text-dark leading-7 text-[22px]"
+                >
+                  SEOPro Pulse
+                </h2>
+                <p
+                  class="text-base font-urbanist text-textColor leading-6 tracking-[0.32px] font-medium py-2 w-64"
+                >
+                  Purus velit aene an quis habitant eros the ann bibendum
+                  aenelit aenean quis habitant eros the ann bibendum aenean
+                </p>
+                <button class="flex justify-center items-center gap-2">
+                  <span
+                    class="text-base capitalize font-semibold text-dark font-urbanist"
+                    >read more</span
+                  >
+                  <img src="/assets/right_arrow.svg" alt="right arrow" />
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center gap-5 bg-white px-4 py-8 rounded-md">
+              <div class="-mt-20">
+                <img src="/assets/dominate.png" alt="" />
+              </div>
+              <div>
+                <h2
+                  class="font-urbanist font-semibold text-dark leading-7 text-[22px]"
+                >
+                  Dominate Clicks
+                </h2>
+                <p
+                  class="text-base font-urbanist text-textColor leading-6 tracking-[0.32px] font-medium py-2 w-64"
+                >
+                  Purus velit aene an quis habitant eros the ann bibendum
+                  aenelit aenean quis habitant eros the ann bibendum aenean
+                </p>
+                <button class="flex justify-center items-center gap-2">
+                  <span
+                    class="text-base capitalize font-semibold text-dark font-urbanist"
+                    >read more</span
+                  >
+                  <img src="/assets/right_arrow.svg" alt="right arrow" />
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center gap-5 bg-white px-4 py-8 rounded-md">
+              <div class="-mt-20"><img src="/assets/rank.png" alt="" /></div>
+              <div>
+                <h2
+                  class="font-urbanist font-semibold text-dark leading-7 text-[22px]"
+                >
+                  Rank Revolution
+                </h2>
+                <p
+                  class="text-base font-urbanist text-textColor leading-6 tracking-[0.32px] font-medium py-2 w-64"
+                >
+                  Purus velit aene an quis habitant eros the ann bibendum
+                  aenelit aenean quis habitant eros the ann bibendum aenean
+                </p>
+                <button class="flex justify-center items-center gap-2">
+                  <span
+                    class="text-base capitalize font-semibold text-dark font-urbanist"
+                    >read more</span
+                  >
+                  <img src="/assets/right_arrow.svg" alt="right arrow" />
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center gap-5 bg-white px-4 py-8 rounded-md">
+              <div class="-mt-20">
+                <img src="/assets/click.png" alt="" />
+              </div>
+              <div>
+                <h2
+                  class="font-urbanist font-semibold text-dark leading-7 text-[22px]"
+                >
+                  Click Craft SEO
+                </h2>
+                <p
+                  class="text-base font-urbanist text-textColor leading-6 tracking-[0.32px] font-medium py-2 w-64"
+                >
+                  Purus velit aene an quis habitant eros the ann bibendum
+                  aenelit aenean quis habitant eros the ann bibendum aenean
+                </p>
+                <button class="flex justify-center items-center gap-2">
+                  <span
+                    class="text-base capitalize font-semibold text-dark font-urbanist"
+                    >read more</span
+                  >
+                  <img src="/assets/right_arrow.svg" alt="right arrow" />
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center gap-5 bg-white px-4 py-8 rounded-md">
+              <div class="-mt-20"><img src="/assets/paid.png" alt="" /></div>
+              <div>
+                <h2
+                  class="font-urbanist font-semibold text-dark leading-7 text-[22px]"
+                >
+                  Paid Traffic
+                </h2>
+                <p
+                  class="text-base font-urbanist text-textColor leading-6 tracking-[0.32px] font-medium py-2 w-64"
+                >
+                  Purus velit aene an quis habitant eros the ann bibendum
+                  aenelit aenean quis habitant eros the ann bibendum aenean
+                </p>
+                <button class="flex justify-center items-center gap-2">
+                  <span
+                    class="text-base capitalize font-semibold text-dark font-urbanist"
+                    >read more</span
+                  >
+                  <img src="/assets/right_arrow.svg" alt="right arrow" />
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center gap-5 bg-white px-4 py-8 rounded-md">
+              <div class="-mt-20"><img src="/assets/search.png" alt="" /></div>
+              <div>
+                <h2
+                  class="font-urbanist font-semibold text-dark leading-7 text-[22px]"
+                >
+                  Search Pulse
+                </h2>
+                <p
+                  class="text-base font-urbanist text-textColor leading-6 tracking-[0.32px] font-medium py-2 w-64"
+                >
+                  Purus velit aene an quis habitant eros the ann bibendum
+                  aenelit aenean quis habitant eros the ann bibendum aenean
+                </p>
+                <button class="flex justify-center items-center gap-2">
+                  <span
+                    class="text-base capitalize font-semibold text-dark font-urbanist"
+                    >read more</span
+                  >
+                  <img src="/assets/right_arrow.svg" alt="right arrow" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- subscribe newsletter -->
+      <section class="pb-12 md:py-28">
+        <div
+          class="max-w-7xl bg-primary mx-auto rounded-xl md:flex justify-around items-center px-8 py-14 newsLetterCard"
+        >
+          <div>
+            <img
+              src="/assets/email_newsletter.svg"
+              alt=""
+              class="md:w-20 w-16"
+            />
+          </div>
+          <h1
+            class="text-3xl md:text-5xl text-white font-urbanist font-bold leading-9 md:leading-[62px] -tracking-[1.08px] py-5 md:py-0"
+          >
+            Subscribe to My <br />
+            newsletter
+          </h1>
+          <div class="flex rounded-full border-[1px] border-white">
+            <!-- Email Input -->
+            <input
+              type="email"
+              placeholder="Enter Email Address"
+              class="rounded-l-full font-urbanist text-base font-medium leading-6 tracking-[0.32px] py-3 px-5 w-full md:w-72 text-white placeholder-white bg-transparent focus:outline-none"
+            />
+
+            <!-- Button -->
+            <button
+              class="flex items-center gap-2 pr-8 md:px-5 py-3 bg-white rounded-r-full hover:bg-gray-200"
+            >
+              <img src="/assets/right_top_arrow.png" alt="" />
+              <span class="text-purple-600 font-semibold whitespace-nowrap"
+                >Subscribe Now</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- certification for SEO Service -->
+      <section class="md:py-28 py-12">
+        <div
+          class="max-w-7xl mx-auto md:flex gap-16 justify-between items-center"
+          id="seo-animated-section"
+        >
+          <div class="w-full md:w-3/6">
+            <img src="/assets/seo.png" alt="" />
+          </div>
+          <div class="w-full md:w-3/6 ml-5 md:ml-0 mt-10 md:mt-0">
+            <p
+              class="w-24 h-6 bg-[#eaf9ff] rounded-full font-urbanist font-medium text-center text-base"
+            >
+              service
+            </p>
+            <h1
+              class="font-urbanist font-bold text-3xl md:text-[54px] tracking-[-1.08px] leading-10 md:leading-[62px] text-dark pt-5"
+            >
+              Certifications For SEO Specialists
+            </h1>
+            <div class="py-10">
+              <h2
+                class="text-[22px] font-semibold font-urbanist text-dark leading-7"
+              >
+                Search Craft Elite
+              </h2>
+              <img src="/assets/linedot.svg" alt="" />
+              <p
+                class="text-base font-urbanist font-medium leading-[26px] text-textColor w-72 mt-4"
+              >
+                Lorem ipsum dolor sit amet consectetur adipiscing elit, eleifend
+              </p>
+            </div>
+            <div>
+              <h2
+                class="text-[22px] font-semibold font-urbanist text-dark leading-7"
+              >
+                Web Wizardry SEO
+              </h2>
+              <img src="/assets/linedot.svg" alt="" />
+              <p
+                class="text-base font-urbanist font-medium leading-[26px] text-textColor w-72 mt-4"
+              >
+                Lorem ipsum dolor sit amet consectetur adipiscing elit, eleifend
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Mastery Unleashed section -->
+      <section class="bg-[#F4F5F9] py-28">
+        <div class="max-w-7xl mx-auto">
+          <p
+            class="w-24 h-6 bg-[#eaf9ff] rounded-full font-urbanist font-medium text-center text-base md:mx-auto ml-5"
+          >
+            Gallery
+          </p>
+          <h1
+            class="font-urbanist font-bold text-3xl md:text-[54px] tracking-[-1.08px] leading-10 md:leading-[62px] text-dark pt-5 text-center md:px-72"
+          >
+            Optimize Rise Conquer SEO Mastery Unleashed
+          </h1>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-16 md:gap-4 mt-24 mastery-card mx-2 md:mx-0"
+          >
+            <div class="relative">
+              <div
+                class="bg-gradient-to-r from-[#47479F] to-[#9191D7] w-[180px] py-3 rounded-md ml-8 absolute -top-10"
+              >
+                <h1
+                  class="text-[22px] font-urbanist font-semibold leading-7 text-white ml-6"
+                >
+                  Optimize Hub
+                </h1>
+                <p class="text-base text-white font-urbanist font-medium ml-6">
+                  Ideas
+                </p>
+              </div>
+              <div>
+                <img src="/assets/masteryImg.png" alt="" />
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="bg-gradient-to-r from-[#657EFF] to-[#657cee] w-[180px] py-3 rounded-md ml-8 absolute -top-10"
+              >
+                <h1
+                  class="text-[22px] font-urbanist font-semibold leading-7 text-white ml-6"
+                >
+                  Rank Rises
+                </h1>
+                <p class="text-base text-white font-urbanist font-medium ml-6">
+                  Ideas
+                </p>
+              </div>
+              <div>
+                <img src="/assets/masteryImg2.png" alt="" />
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="bg-gradient-to-r from-[#57D288] to-[#5acb87] w-[180px] py-3 rounded-md ml-8 absolute -top-10"
+              >
+                <h1
+                  class="text-[22px] font-urbanist font-semibold leading-7 text-white ml-6"
+                >
+                  SEO Maven
+                </h1>
+                <p class="text-base text-white font-urbanist font-medium ml-6">
+                  Ideas
+                </p>
+              </div>
+              <div>
+                <img src="/assets/masteryImg3.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="md:flex justify-between items-center pt-28">
+            <div class="md:w-3/6 w-full ml-5 md:ml-0">
+              <p
+                class="w-24 h-6 bg-[#eaf9ff] rounded-full font-urbanist font-medium text-center text-base"
+              >
+                Review
+              </p>
+              <h1
+                class="font-urbanist font-bold text-3xl md:text-[54px] tracking-[-1.08px] leading-10 md:leading-[62px] text-dark pt-5"
+              >
+                What Our Client Says
+              </h1>
+              <div class="flex items-center gap-8 mt-8 md:mt-20">
+                <div
+                  class="w-[67px] h-[67px] rounded-full border-[1px] border-[#FE9D51] flex justify-center items-center"
+                >
+                  <img src="/assets/arrow-left.svg" alt="" />
+                </div>
+                <div
+                  class="w-[67px] h-[67px] rounded-full border-[1px] border-[#657EFF] flex justify-center items-center"
+                >
+                  <img src="/assets/arrow-right.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="md:w-3/6 w-full bg-white px-10 py-8 mt-8 md:mt-0 rounded-md"
+            >
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-5">
+                  <div><img src="/assets/review.png" alt="" /></div>
+                  <div>
+                    <h1
+                      class="text-[22px] font-urbanist font-semibold leading-7 text-dark"
+                    >
+                      M. Anderson
+                    </h1>
+                    <p
+                      class="text-base font-urbanist font-medium leading-[26px] text-textColor"
+                    >
+                      Software Engineer
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img src="/assets/koma.png" alt="" />
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 py-5">
+                  <img src="/assets/star_yellow.png" alt="" />
+                  <img src="/assets/star_yellow.png" alt="" />
+                  <img src="/assets/star_yellow.png" alt="" />
+                  <img src="/assets/star_yellow.png" alt="" />
+                  <img src="/assets/star_white.png" alt="" />
+                </div>
+
+                <p
+                  class="w-full md:w-[420px] text-[18px] font-urbanist text-textColor font-medium leading-[30px]"
+                >
+                  Working with this company has been a game-changer for mysi
+                  business Their is expertise and innovative approach have desm
+                  helped us achieve remarkable design growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- plan section -->
+      <section class="relative py-20 pricing-card">
+        <div class="absolute top-16 left-16 -z-10">
+          <img src="/assets/startFrame.png" alt="" />
+        </div>
+        <div class="absolute right-0 md:right-96 top-40 -z-10">
+          <img src="/assets/circle_bg.png" alt="" />
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+          <div>
+            <p
+              class="w-24 h-6 bg-[#eaf9ff] rounded-full font-urbanist font-medium text-center text-base mx-auto"
+            >
+              Pricing
+            </p>
+            <h1
+              class="font-urbanist font-bold text-3xl md:text-[54px] tracking-[-1.08px] leading-10 md:leading-[62px] text-dark pt-5 text-center"
+            >
+              Choose Your Plan
+            </h1>
+          </div>
+          <div class="mx-3 md:mx-0">
+            <div class="text-center mt-20">
+              <button
+                class="bg-gradient-to-r from-[#9836FF] to-[#C34FF8] px-6 py-2 rounded-s-full text-white text-[18px] font-urbanist font-medium tracking-wide shadow-lg"
+              >
+                Monthly
+              </button>
+              <button
+                class="bg-white px-6 py-2 border-t-[1px] border-r-[1px] border-b-[1px] border-[#E1E1E1] rounded-r-full text-[18px] font-urbanist font-medium tracking-wide text-dark -ml-2"
+              >
+                Yearly
+              </button>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+            >
+              <div class="border-[1px] rounded-md py-8 px-6">
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <p
+                        class="text-[54px] font-urbanist font-semibold text-[#657EFF] leading-[62px]"
+                      >
+                        $19
+                        <span
+                          class="text-[20px] font-urbanist font-semibold text-dark"
+                          >/mo</span
+                        >
+                      </p>
+                      <p
+                        class="text-[22px] font-urbanist font-semibold text-dark"
+                      >
+                        Basic Plan
+                      </p>
+                    </div>
+                    <div class="mr-16 mt-8">
+                      <img src="/assets/Glyph.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="w-72 h-[1px] bg-[#E7E7EB] my-3"></div>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Mistakes To Avoid</span>
+                  </div>
+                  <div class="flex items-center gap-3 my-2">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Your Startup</span>
+                  </div>
+                  <div class="flex items-center gap-3 my-2">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Knew About Fonts</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Winning Metric for Your Startup</span>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <button
+                    class="flex justify-center items-center gap-2 w-[250px] py-3 border-[1px] rounded-full hover:bg-[#e1e1e1] duration-500"
+                  >
+                    <span
+                      class="text-base font-urbanist font-semibold text-dark capitalize"
+                      >purchase now</span
+                    ><img src="/assets/arrow_right_blue.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="border-[1px] rounded-md py-8 px-6">
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <p
+                        class="text-[54px] font-urbanist font-semibold text-[#9836FF] leading-[62px]"
+                      >
+                        $39
+                        <span
+                          class="text-[20px] font-urbanist font-semibold text-dark"
+                          >/mo</span
+                        >
+                      </p>
+                      <p
+                        class="text-[22px] font-urbanist font-semibold text-dark"
+                      >
+                        Gold Plan
+                      </p>
+                    </div>
+                    <div class="mr-16 mt-8">
+                      <img src="/assets/Glyph2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="w-72 h-[1px] bg-[#E7E7EB] my-3"></div>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3">
+                    <img src="/assets/checkbox_purple.png" alt="" />
+                    <span>Mistakes To Avoid</span>
+                  </div>
+                  <div class="flex items-center gap-3 my-2">
+                    <img src="/assets/checkbox_purple.png" alt="" />
+                    <span>Your Startup</span>
+                  </div>
+                  <div class="flex items-center gap-3 my-2">
+                    <img src="/assets/checkbox_purple.png" alt="" />
+                    <span>Knew About Fonts</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img src="/assets/checkbox_purple.png" alt="" />
+                    <span>Winning Metric for Your Startup</span>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <button
+                    class="flex justify-center items-center gap-2 w-[250px] py-3 border-[1px] rounded-full bg-primary"
+                  >
+                    <span
+                      class="text-base font-urbanist font-semibold text-white capitalize"
+                      >purchase now</span
+                    ><img src="/assets/arrow_right_white.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="border-[1px] rounded-md py-8 px-6">
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <p
+                        class="text-[54px] font-urbanist font-semibold text-[#657EFF] leading-[62px]"
+                      >
+                        $49
+                        <span
+                          class="text-[20px] font-urbanist font-semibold text-dark"
+                          >/mo</span
+                        >
+                      </p>
+                      <p
+                        class="text-[22px] font-urbanist font-semibold text-dark"
+                      >
+                        Premium Plan
+                      </p>
+                    </div>
+                    <div class="mr-16 mt-8">
+                      <img src="/assets/Glyph3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="w-72 h-[1px] bg-[#E7E7EB] my-3"></div>
+                </div>
+                <div>
+                  <div class="flex items-center gap-3">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Mistakes To Avoid</span>
+                  </div>
+                  <div class="flex items-center gap-3 my-2">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Your Startup</span>
+                  </div>
+                  <div class="flex items-center gap-3 my-2">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Knew About Fonts</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img src="/assets/checkbox.png" alt="" />
+                    <span>Winning Metric for Your Startup</span>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <button
+                    class="flex justify-center items-center gap-2 w-[250px] py-3 border-[1px] rounded-full hover:bg-[#e1e1e1] duration-500"
+                  >
+                    <span
+                      class="text-base font-urbanist font-semibold text-dark capitalize"
+                      >purchase now</span
+                    ><img src="/assets/arrow_right_blue.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- brand section -->
+      <section class="py-24 bg-[#F4F5F9]">
+        <div
+          class="max-w-7xl md:mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-3"
+        >
+          <div class="border-[1px] rounded-md py-6 px-4 bg-white">
+            <img src="/assets/brandGlyph.png" alt="" class="mx-auto" />
+            <h1
+              class="text-center text-[22px] leading-[28px] font-urbanist font-semibold mt-6"
+            >
+              Marketing
+            </h1>
+          </div>
+          <div class="border-[1px] rounded-md py-6 px-4 bg-white">
+            <img src="/assets/brandGlyph2.png" alt="" class="mx-auto" />
+            <h1
+              class="text-center text-[22px] leading-[28px] font-urbanist font-semibold mt-6"
+            >
+              Marketing
+            </h1>
+          </div>
+          <div class="border-[1px] rounded-md py-6 px-4 bg-white">
+            <img src="/assets/brandGlyph3.png" alt="" class="mx-auto" />
+            <h1
+              class="text-center text-[22px] leading-[28px] font-urbanist font-semibold mt-6"
+            >
+              Marketing
+            </h1>
+          </div>
+          <div class="border-[1px] rounded-md py-6 px-4 bg-white">
+            <img src="/assets/brandYuan.png" alt="" class="mx-auto" />
+            <h1
+              class="text-center text-[22px] leading-[28px] font-urbanist font-semibold mt-6"
+            >
+              Marketing
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- blog section -->
+      <section class="py-28">
+        <div class="max-w-7xl mx-auto" id="blog-animated-section">
+          <div class="md:flex justify-between items-center mx-3 md:mx-0">
+            <div>
+              <p
+                class="w-24 h-6 bg-[#eaf9ff] rounded-full font-urbanist font-medium text-center text-base"
+              >
+                Our Blog
+              </p>
+              <h1
+                class="font-urbanist font-bold text-3xl md:text-[54px] tracking-[-1.08px] leading-10 md:leading-[62px] text-dark pt-5"
+              >
+                Climb the Ranks Crush the Competition
+              </h1>
+            </div>
+            <div>
+              <p
+                class="text-base font-urbanist font-normal text-[#6D6C79] w-full md:w-[480px] py-3 md:py-0"
+              >
+                Distracted by the readable content of a page when looking atits
+                layout io The point of using Lorem Ipsum is that it has a more
+                Distracted by the readable content
+              </p>
+            </div>
+          </div>
+          <div class="md:flex items-center gap-5 mx-3 md:mx-0">
+            <div class="md:flex mt-5">
+              <div><img src="/assets/blogImage.png" alt="" /></div>
+              <div
+                class="px-6 shadow-[rgba(0,0,10,0.1)_1px_1px_5px_0px] pt-6 pb-6 md:pb-0"
+              >
+                <div class="flex items-center gap-2">
+                  <img src="/assets/dateimg.png" alt="" />
+                  <span
+                    class="text-base font-urbanist font-medium text-[#616161]"
+                    >October 19, 2022</span
+                  >
+                </div>
+                <h1
+                  class="text-[22px] font-semibold font-urbanist leading-7 text-dark py-5"
+                >
+                  The Rise of Plant-Based Diets Rise of Plant
+                </h1>
+                <p
+                  class="text-base font-urbanist font-medium text-[#335371] leading-6"
+                >
+                  Enim ultricies dolor gravida ipsum. Sed desig magna sed
+                  vulputate
+                </p>
+                <button
+                  class="relative overflow-hidden group w-[150px] h-[40px] border-[1px] border-[#E7E7EB] rounded-full text-[#47479F] mt-5"
+                >
+                  <span
+                    class="font-urbanist font-semibold text-base capitalize relative z-20 duration-300 group-hover:text-[#fff]"
+                    >read more
+                    <i class="fa-solid fa-arrow-right text-[12px] ml-2"></i
+                  ></span>
+
+                  <span
+                    class="absolute inset-0 bg-[#C34FF8] transition-transform duration-500 translate-x-full group-hover:translate-x-0"
+                  >
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="md:flex mt-5">
+              <div><img src="/assets/blogImag2.png" alt="" /></div>
+              <div
+                class="px-6 shadow-[rgba(0,0,10,0.1)_1px_1px_5px_0px] py-6 pb-6 md:pb-0"
+              >
+                <div class="flex items-center gap-2">
+                  <img src="/assets/dateimg.png" alt="" />
+                  <span
+                    class="text-base font-urbanist font-medium text-[#616161]"
+                    >October 19, 2022</span
+                  >
+                </div>
+                <h1
+                  class="text-[22px] font-semibold font-urbanist leading-7 text-dark py-5"
+                >
+                  The Rise of Plant-Based Diets Rise of Plant
+                </h1>
+                <p
+                  class="text-base font-urbanist font-medium text-[#335371] leading-6"
+                >
+                  Enim ultricies dolor gravida ipsum. Sed desig magna sed
+                  vulputate
+                </p>
+                <button
+                  class="relative overflow-hidden group w-[150px] h-[40px] border-[1px] border-[#E7E7EB] rounded-full text-[#47479F] mt-5"
+                >
+                  <span
+                    class="font-urbanist font-semibold text-base capitalize relative z-20 duration-300 group-hover:text-[#fff]"
+                    >read more
+                    <i class="fa-solid fa-arrow-right text-[12px] ml-2"></i
+                  ></span>
+
+                  <span
+                    class="absolute inset-0 bg-[#C34FF8] transition-transform duration-500 translate-x-full group-hover:translate-x-0"
+                  >
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark pt-32 pb-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="md:flex justify-between gap-6 ml-5 md:ml-0">
+          <div>
+            <div class="flex items-center gap-2">
+              <img src="/assets/logo.png" alt="" />
+              <span
+                class="text-white text-[30px] leading-[30px] font-urbanist font-bold"
+                >SEOPlus</span
+              >
+            </div>
+            <p
+              class="text-white w-full md:w-[350px] text-base font-urbanist font-medium leading-7 mt-7"
+            >
+              SEO agency is a company that specializes in providing search
+              engine optimization services. They help businesses improve their
+              online visibility and increase their organic
+            </p>
+          </div>
+          <div>
+            <h2
+              class="text-white text-[22px] font-semibold font-urbanist leading-7 mt-5 md:mt-0"
+            >
+              Company
+            </h2>
+            <div class="mt-7">
+              <div class="flex items-center gap-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Team</span
+                >
+              </div>
+              <div class="flex items-center gap-2 py-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Services</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Blogs</span
+                >
+              </div>
+              <div class="flex items-center gap-2 py-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Terms</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >FAQ</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2
+              class="text-white text-[22px] font-semibold font-urbanist leading-7 mt-5 md:mt-0"
+            >
+              Services
+            </h2>
+            <div class="mt-7">
+              <div class="flex items-center gap-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Ui Design</span
+                >
+              </div>
+              <div class="flex items-center gap-2 py-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Ux Design</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Seo Marketing</span
+                >
+              </div>
+              <div class="flex items-center gap-2 py-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Seo Editing</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="/assets/right_arr.svg" alt="" />
+                <span class="text-white text-base font-urbanist font-medium"
+                  >Seo Repairs</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2
+              class="text-white text-[22px] font-semibold font-urbanist leading-7 mt-5 md:mt-0"
+            >
+              Recent News
+            </h2>
+            <div
+              class="relative flex rounded-full border-[1px] border-white mt-7"
+            >
+              <!-- Email Input -->
+              <input
+                type="email"
+                placeholder="Your e-mail"
+                class="rounded-l-full font-urbanist text-base font-medium leading-6 tracking-[0.32px] py-3 px-5 text-white placeholder-white bg-transparent focus:outline-none"
+              />
+
+              <!-- Button -->
+              <button
+                class="absolute flex justify-center items-center right-0 top-0 w-12 h-12 gap-2 md:px-5 py-3 bg-[#57D288] rounded-full hover:bg-[#E8411D] duration-500"
+              >
+                <img
+                  src="/assets/PaperPlaneTilt.svg"
+                  alt="PaperPlaneTilt icon"
+                />
+              </button>
+            </div>
+            <div class="flex gap-4 mt-8">
+              <img src="/assets/linkedin.png" alt="" />
+              <img src="/assets/pinterested.png" alt="" />
+              <img src="/assets/twitter.png" alt="" />
+              <img src="/assets/instagram.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer bottom -->
+      <div class="max-w-7xl mx-auto mt-16">
+        <div class="w-full h-[1px] bg-[#616161]"></div>
+        <div
+          class="md:flex justify-between items-center ml-5 md:ml-0 mt-5 md:mt-0"
+        >
+          <p class="text-[#dad9d9]">
+            © Yoursitename 2023 | All Rights Reserved
+          </p>
+          <ul class="list-none md:flex items-center gap-7 mt-7">
+            <li
+              class="text-[#dad9d9] text-base font-urbanist font-medium leading-6"
+            >
+              Trams & Condition
+            </li>
+            <li
+              class="text-[#dad9d9] text-base font-urbanist font-medium leading-6"
+            >
+              Privacy Policy
+            </li>
+            <li
+              class="text-[#dad9d9] text-base font-urbanist font-medium leading-6"
+            >
+              Contact Us
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- link javascript file -->
+    <script src="./app.js"></script>
+  </body>
+</html>
