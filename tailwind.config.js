@@ -14,8 +14,8 @@ module.exports = {
         jakarta: "Plus Jakarta Sans",
       },
       backgroundImage: {
-        bannerBg: "url('/assets/Rectangle 4116.svg')",
-        bannerBgCurve: "url('/assets/curve.svg')",
+        bannerBg: "url('/src/assets/Rectangle 4116.svg')",
+        bannerBgCurve: "url('/src/assets/curve.svg')",
       },
     },
   },
